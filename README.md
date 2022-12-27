@@ -31,7 +31,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Step 3: Create OU's (Organizational Units) for admins and employees.
 - Step 4: Create a user in the admins OU.
 - Step 5: Add the user to the domain admins group to make the user a domain admin.
-- Step 6: 
+- Step 6: Join Client-1 to the "mydomain.com" domain.
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -76,15 +76,15 @@ Step 5
 <img src="https://i.imgur.com/MRCpEiX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Assign the user to the domain admin group by right clicking the user account and go to properties. Go to the member of tab and select add. Type Domain Admins, click ok, apply, and then ok.
+Assign the user to the domain admin group by right clicking the user account and go to properties. Go to the member of tab and select add. Type Domain Admins, click ok, apply, and then ok. Log out of the DC-1 and log back in with the new admin user account.
 </p>
 <br />
 
 Step 6
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/2JgYh7M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Login to Client-1, right click "start" on the bottom left select system, and on the right select "rename this PC Advanced". In system properties select "change", select Domain and type the name of your domain. Select ok and type the admin user's login we created earlier and select ok. Client-1 will now join the domain.
 </p>
 <br />
