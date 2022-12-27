@@ -29,8 +29,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Step 1: Install Active Directory on the Windows Server. This VM will act as the Domain Controller (DC-1).
 - Step 2: Promote DC-1 to a Domain Controller and create a Domain.
 - Step 3: Create OU's (Organizational Units) for admins and employees.
-- Step 4: 
-- Step 5: 
+- Step 4: Create a user in the admins OU.
+- Step 5: Add the user to the domain admins group to make the user a domain admin.
 - Step 6: 
 
 <h2>Deployment and Configuration Steps</h2>
@@ -64,19 +64,19 @@ In Server Manager, on the top right, select tools and click "Active Directory Us
 
 Step 4
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/E0nrst1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+It is best practice to use an administrator account to perform administrative tasks. Create an administrative account by going to the admin OU, right clicking in the empty space and create a new user. Fill out the user's name and logon, select next, create the users password, select next and create the user.
 </p>
 <br />
 
 Step 5
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/MRCpEiX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Assign the user to the domain admin group by right clicking the user account and go to properties. Go to the member of tab and select add. Type Domain Admins, click ok, apply, and then ok.
 </p>
 <br />
 
