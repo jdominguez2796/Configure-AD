@@ -38,7 +38,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 Step 1
 <p>
-<img src="https://i.imgur.com/EhiwlWG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/BfXfBD7.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 On DC-1, navigate to server manager. Select "Manage" on the top right and click "Add Roles and Features" on the dropdown. Continue with the defaults until reaching the Server Roles step. Make sure to check the "Active Directory Domain Services" role. From here select next with default options on the rest of the installation steps. Select install on the final step. Wait for the installation to finish.
