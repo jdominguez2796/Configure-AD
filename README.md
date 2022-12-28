@@ -32,6 +32,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Step 4: Create a user in the admins OU.
 - Step 5: Add the user to the domain admins group to make the user a domain admin.
 - Step 6: Join Client-1 to the "mydomain.com" domain.
+- Step 7: Enable Remote Desktop (RDP) for Domain_Users group on Client-1.
+- Step 8: On DC-1, create a new user in the Employees OU and attempt to login to Client-1 with this new user.
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -85,6 +87,24 @@ Step 6
 <img src="https://i.imgur.com/2JgYh7M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Login to Client-1, right click "start" on the bottom left select system, and on the right select "rename this PC Advanced". In system properties select "change", select Domain and type the name of your domain. Select ok and type the admin user's login we created earlier and select ok. Client-1 will now join the domain.
+Login to Client-1, right click "start" on the bottom left select system, and on the right select "rename this PC Advanced". In system properties select "change", select Domain and type the name of your domain. Select ok and type the admin user's login we created earlier and select ok. Client-1 will now join the domain and restart. You can now log into Client-1 with any user account that is a part of the Domain even if a local account was never made for Client-1. For example, logging in as the james_admin user we created earlier into Client-1 will work.
+</p>
+<br />
+
+Step 7
+<p>
+<img src="https://i.imgur.com/E5giFyK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+On Client-1, right click the start button on the bottom right left again and select system. Then select Remote Desktop on the right. Select under user accounts "select users that can remotely access this PC". Click "Add", type the Domain_Users group and select ok and ok again. The purpose of allowing this group is so that any user account belong to Domain_Users can RDP to Client-1 for remote troubleshooting or assisting a user.
+</p>
+<br />
+
+Step 8
+<p>
+<img src="https://i.imgur.com/VLjBCtA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+On DC-1, go back to "Active Directory Users and Computers". Select the Employees folder and right click on empty white space on the right and create a new user. Fill out the users name and credentials. With this new account, you are able to log in to any PC that is a part of this domain. Selecting a group will show what users are a part of the group. Here you can do common tasks such as resetting user passwords, or unlocking locked user accounts. You can see this by right clicking a user and selecting the appropriate options. This concludes this tutorial.
 </p>
 <br />
